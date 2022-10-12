@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+=======
+import { useLocation, useNavigate } from "react-router-dom";
+>>>>>>> 7a12e90c891637d6914ebde6a2d9c32fe623e682
 import axios from "../../api/axios";
 import { useDebounce } from "../../hooks/useDebounce";
 import "./SearchPage.css";
@@ -11,6 +15,7 @@ export default function SearchPage() {
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
   };
+<<<<<<< HEAD
   let query = useQuery();
   const searchTerm = query.get("q");
   const debounceSearchTerm = useDebounce(searchTerm, 500);
@@ -22,6 +27,20 @@ export default function SearchPage() {
   }, [debounceSearchTerm]);
 
   const fetchSearchMovie = async (searchTerm) => {
+=======
+
+  let query = useQuery();
+  const searchTerm = query.get("q");
+  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+  useEffect(() => {
+    if (debouncedSearchTerm) {
+      fetchSearchMovie(debouncedSearchTerm);
+    }
+  }, [debouncedSearchTerm]);
+
+  const fetchSearchMovie = async (searchTerm) => {
+    console.log("searchTerm", searchTerm);
+>>>>>>> 7a12e90c891637d6914ebde6a2d9c32fe623e682
     try {
       const request = await axios.get(
         `/search/multi?include_adult=false&query=${searchTerm}`
@@ -61,7 +80,11 @@ export default function SearchPage() {
       <section className="no-results">
         <div className="no-results__text">
           <p>
+<<<<<<< HEAD
             찾고자하는 검색어 "{debounceSearchTerm}" 에 맞는 영화가 없습니다.
+=======
+            찾고자하는 검색어"{debouncedSearchTerm}"에 맞는 영화가 없습니다.
+>>>>>>> 7a12e90c891637d6914ebde6a2d9c32fe623e682
           </p>
         </div>
       </section>
