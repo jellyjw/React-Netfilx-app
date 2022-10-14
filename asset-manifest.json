@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Netfilx-app/static/css/main.e5358e39.css",
+    "main.js": "/React-Netfilx-app/static/js/main.a6f2441f.js",
+    "static/js/787.7d8a7a6f.chunk.js": "/React-Netfilx-app/static/js/787.7d8a7a6f.chunk.js",
+    "index.html": "/React-Netfilx-app/index.html",
+    "main.e5358e39.css.map": "/React-Netfilx-app/static/css/main.e5358e39.css.map",
+    "main.a6f2441f.js.map": "/React-Netfilx-app/static/js/main.a6f2441f.js.map",
+    "787.7d8a7a6f.chunk.js.map": "/React-Netfilx-app/static/js/787.7d8a7a6f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5358e39.css",
+    "static/js/main.a6f2441f.js"
+  ]
+}
